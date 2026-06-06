@@ -6,13 +6,14 @@ router.get('/', async (req, res) => {
 
         res.json(usuarios);
 
-    } catch(error) {
+    } catch (error) {
 
         console.error(error);
 
         res.status(500).json({
             error: error.message
         });
+
     }
 
 });
