@@ -1,4 +1,4 @@
-const API = "https://techstore-1-l2zu.onrender.com/clientes";
+const API = "https://techstore-1-12zu.onrender.com/clientes";
 
 let clienteEditar = null;
 
