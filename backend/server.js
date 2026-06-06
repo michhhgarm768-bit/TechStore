@@ -21,13 +21,15 @@ app.use('/clientes', require('./routes/clientes'));
 app.use('/ventas', require('./routes/ventas'));
 const usuariosRoutes = require('./routes/usuarios');
 
+console.log("Cargando rutas de usuarios...");
 app.use('/usuarios', usuariosRoutes);
-
 // Ruta principal
 app.get('/', (req, res) => {
     res.send('API TechStore funcionando');
 });
 const PORT = process.env.PORT || 8000;
+
+console.log("Rutas cargadas correctamente");
 
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en puerto ${PORT}`);
