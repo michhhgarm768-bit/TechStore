@@ -31,6 +31,13 @@ app.get('/test', (req, res) => {
     res.send('Servidor funcionando');
 });
 
+console.log("Rutas registradas:");
+console.log("/productos");
+console.log("/clientes");
+console.log("/ventas");
+console.log("/usuarios");
+console.log("/test");
+
 const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
