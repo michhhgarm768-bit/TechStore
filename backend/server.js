@@ -27,8 +27,7 @@ app.use('/usuarios', usuariosRoutes);
 app.get('/', (req, res) => {
     res.send('API TechStore funcionando');
 });
-
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en puerto ${PORT}`);
