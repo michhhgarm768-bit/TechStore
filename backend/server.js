@@ -24,6 +24,9 @@ const usuariosRoutes = require('./routes/usuarios');
 console.log("Cargando rutas de usuarios...");
 app.use('/usuarios', usuariosRoutes);
 // Ruta principal
+app.get('/test', (req, res) => {
+    res.send('Servidor funcionando');
+});
 app.get('/', (req, res) => {
     res.send('API TechStore funcionando');
 });
