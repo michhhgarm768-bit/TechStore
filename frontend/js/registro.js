@@ -1,4 +1,4 @@
-const API = "https://techstore-etr0.onrender.com/registro";
+const API = "https://techstore-etr0.onrender.com/usuarios/registro";
 
 async function registrar() {
 

@@ -1,41 +1,18 @@
-const express = require('express');
-const router = express.Router();
+router.get('/', async (req, res) => {
 
-const Usuario = require('../models/Usuario');
+    try {
 
-router.post('/registro', async (req, res) => {
+        const usuarios = await Usuario.find();
 
-    const usuario = new Usuario(req.body);
+        res.json(usuarios);
 
-    await usuario.save();
+    } catch(error) {
 
-    res.json(usuario);
+        console.error(error);
 
-});
-
-router.post('/login', async (req, res) => {
-
-    const usuario = await Usuario.findOne({
-
-        usuario: req.body.usuario,
-        password: req.body.password
-
-    });
-
-    if(usuario){
-
-        res.json({
-            mensaje: 'Login correcto'
+        res.status(500).json({
+            error: error.message
         });
-
-    }else{
-
-        res.status(401).json({
-            mensaje: 'Usuario o contraseña incorrectos'
-        });
-
     }
 
 });
-
-module.exports = router;

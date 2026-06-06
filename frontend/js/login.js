@@ -1,4 +1,4 @@
-const API = "https://techstore-etr0.onrender.com/login";
+const API = "https://techstore-etr0.onrender.com/usuarios/login";
 
 async function login() {
 
