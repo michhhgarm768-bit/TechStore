@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000/ventas";
+const API = "https://techstore-etr0.onrender.com/ventas";
 
 async function cargarVentas() {
 

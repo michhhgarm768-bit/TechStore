@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:8000/clientes";
+const API = "https://techstore-etr0.onrender.com/clientes";
 
 let clienteEditar = null;
 

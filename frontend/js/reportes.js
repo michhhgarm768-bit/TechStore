@@ -5,7 +5,7 @@ async function cargarReportes() {
     // ==========================
 
     const respuestaVentas =
-        await fetch('http://127.0.0.1:8000/ventas');
+        await fetch('https://techstore-etr0.onrender.com/venta');
 
     const ventas =
         await respuestaVentas.json();
@@ -67,7 +67,7 @@ async function cargarReportes() {
     // ==========================
 
     const respuestaProductos =
-        await fetch('http://127.0.0.1:8000/productos');
+        await fetch('https://techstore-etr0.onrender.com/productos');
 
     const productos =
         await respuestaProductos.json();
