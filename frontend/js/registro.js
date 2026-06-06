@@ -3,28 +3,35 @@ const API = "https://techstore-etr0.onrender.com/usuarios/registro";
 async function registrar() {
 
     const usuario = {
-
         nombre: document.getElementById("nombre").value,
-
         usuario: document.getElementById("usuario").value,
-
         password: document.getElementById("password").value
-
     };
 
-    await fetch(API, {
+    try {
 
-        method: "POST",
+        const respuesta = await fetch(API, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(usuario)
+        });
 
-        headers: {
-            "Content-Type": "application/json"
-        },
+        const datos = await respuesta.json();
 
-        body: JSON.stringify(usuario)
+        if (respuesta.ok) {
 
-    });
+            alert("Usuario registrado correctamente");
+            window.location.href = "login.html";
 
-    alert("Usuario registrado correctamente");
+        } else {
 
-    window.location.href = "login.html";
+            alert("Error: " + JSON.stringify(datos));
+        }
+
+    } catch(error) {
+
+        alert("Error de conexión: " + error.message);
+    }
 }
