@@ -19,20 +19,16 @@ app.use(express.json());
 app.use('/productos', require('./routes/productos'));
 app.use('/clientes', require('./routes/clientes'));
 app.use('/ventas', require('./routes/ventas'));
-const usuariosRoutes = require('./routes/usuarios');
 
-console.log("Cargando rutas de usuarios...");
-app.use('/usuarios', usuariosRoutes);
 // Ruta principal
-app.get('/test', (req, res) => {
-    res.send('Servidor funcionando');
-});
 app.get('/', (req, res) => {
     res.send('API TechStore funcionando');
 });
-const PORT = process.env.PORT || 8000;
+app.get('/test', (req, res) => {
+    res.send('Servidor funcionando');
+});
 
-console.log("Rutas cargadas correctamente");
+const PORT = 8000;
 
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en puerto ${PORT}`);
