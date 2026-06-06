@@ -29,8 +29,28 @@ console.log("DESPUES DE CARGAR USUARIOS");
 app.use('/usuarios', usuariosRoutes);
 
 // Ruta principal
+app.get('/', (req, res) => {
+    res.send('API TechStore VERSION 999');
+});
+
+app.get('/test', (req, res) => {
+    res.send('Servidor funcionando');
+});
+
 app.get('/hola', (req, res) => {
     res.send('HOLA');
 });
 
+console.log("Rutas registradas:");
+console.log("/productos");
+console.log("/clientes");
+console.log("/ventas");
+console.log("/usuarios");
+console.log("/test");
+
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, () => {
+    console.log(`Servidor ejecutándose en puerto ${PORT}`);
+});
 
