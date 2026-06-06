@@ -29,10 +29,8 @@ console.log("DESPUES DE CARGAR USUARIOS");
 app.use('/usuarios', usuariosRoutes);
 
 // Ruta principal
-app.get('/', (req, res) => {
-    res.send('API TechStore VERSION NUEVA');
+app.get('/hola', (req, res) => {
+    res.send('HOLA');
 });
-app.get('/test', (req, res) => {
-    res.send('Servidor funcionando');
-});
+
 
