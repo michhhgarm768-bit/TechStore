@@ -20,6 +20,9 @@ app.use('/productos', require('./routes/productos'));
 app.use('/clientes', require('./routes/clientes'));
 app.use('/ventas', require('./routes/ventas'));
 
+const usuariosRoutes = require('./routes/usuarios');
+app.use('/usuarios', usuariosRoutes);
+
 // Ruta principal
 app.get('/', (req, res) => {
     res.send('API TechStore funcionando');
@@ -28,7 +31,7 @@ app.get('/test', (req, res) => {
     res.send('Servidor funcionando');
 });
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en puerto ${PORT}`);
