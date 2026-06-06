@@ -65,7 +65,7 @@ async function cargarReportes() {
     // ==========================
 
     const respuestaProductos =
-        await fetch('https://techstore-etr0.onrender.com/productos');
+        await fetch('https://techstore-1-l2zu.onrender.com/productos');
 
     const productos =
         await respuestaProductos.json();

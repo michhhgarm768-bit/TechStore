@@ -1,4 +1,4 @@
-const API = "https://techstore-etr0.onrender.com/productos";
+const API = "https://techstore-1-l2zu.onrender.com/productos";
 
 let productoEditar = null;
 
