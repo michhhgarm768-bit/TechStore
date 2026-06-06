@@ -1,4 +1,7 @@
 const express = require('express');
+console.log("*************");
+console.log("VERSION 999");
+console.log("*************");
 const cors = require('cors');
 const dotenv = require('dotenv');
 
