@@ -1,11 +1,9 @@
 async function cargarReportes() {
 
-    // ==========================
-    // VENTAS POR FECHA
-    // ==========================
-
     const respuestaVentas =
-    await fetch('https://techstore-1-12zu.onrender.com/ventas');
+        await fetch('https://techstore-1-12zu.onrender.com/ventas');
+
+    const ventas =
         await respuestaVentas.json();
 
     let htmlVentas = '';
@@ -25,6 +23,9 @@ async function cargarReportes() {
         </tr>
         `;
     });
+
+    document.getElementById('ventasFecha').innerHTML =
+        htmlVentas;
 
     document.getElementById('ventasFecha').innerHTML =
         htmlVentas;
